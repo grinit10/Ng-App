@@ -1,5 +1,5 @@
 import { Server } from './../../shared/models/Server';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child-component',
@@ -8,11 +8,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChildComponentComponent implements OnInit {
 
+  @Output() serverSlected = new EventEmitter();
+
   @Input()
   server: Server;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  selectServer = () => {
+    this.serverSlected.emit(this.server);
+  }
 }

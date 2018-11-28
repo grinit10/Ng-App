@@ -9,7 +9,7 @@ import { CockpitComponent } from '../cockpit/cockpit.component';
 })
 export class ParentComponentComponent implements OnInit {
 
-  @ViewChild(CockpitComponent) cockpit: CockpitComponent;
+  // @ViewChild(CockpitComponent) cockpit: CockpitComponent;
 
   servers: Server[] = [];
 
@@ -19,6 +19,10 @@ export class ParentComponentComponent implements OnInit {
   }
 
   addServer = (server: Server) => {
-    this.servers.push(this.cockpit.server);
+    this.servers.push(server);
+  }
+
+  setSelected = (server: Server) => {
+    // this.cockpit.server = server;
   }
 }

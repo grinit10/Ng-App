@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomMaterialModule } from './material.module';
 import { AppComponent } from './app.component';
@@ -17,7 +18,8 @@ import { ParentComponentComponent } from './inputExample/parent-component/parent
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CustomMaterialModule
+    CustomMaterialModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
