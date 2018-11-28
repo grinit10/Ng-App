@@ -1,0 +1,17 @@
+<app-cockpit (serverAdded)='addServer($event)' (blueprintAdded)='addServer($event)'></app-cockpit>
+<br>
+<br>
+<mat-card>
+  <mat-card-content>
+    <mat-card *ngFor="let server of servers">
+      <mat-card-header>
+        <mat-card-title>{{server.name}}</mat-card-title>
+      </mat-card-header>
+      <!-- <mat-card-title>{{server.name}}</mat-card-title> -->
+      <mat-card-content>
+        <p>{{server.decription}}</p>
+      </mat-card-content>
+    </mat-card>
+
+  </mat-card-content>
+</mat-card>
