@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Server } from './../../shared/models/Server';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-child-component',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildComponentComponent implements OnInit {
 
+  @Input()
+  server: Server;
   constructor() { }
 
   ngOnInit() {
