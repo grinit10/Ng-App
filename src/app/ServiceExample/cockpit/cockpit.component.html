@@ -1,0 +1,11 @@
+<div class='cockpit-container'>
+  <mat-form-field>
+    <input matInput placeholder='Server Name' #servername [value]='server.name'>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder='Server Description' #serverDesc [value]='server.description'></textarea>
+  </mat-form-field>
+  <button mat-raised-button color='primary' (click)='addServer(servername, serverDesc)'>Add Server</button>
+  <br>
+  <button mat-raised-button color='primary' (click)="addBlueprint(servername, serverDesc)">Add Blueprint</button>
+</div>

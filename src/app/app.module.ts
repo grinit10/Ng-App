@@ -1,12 +1,14 @@
+import { LoggingService } from './ServiceExample/services/logging/logging.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomMaterialModule } from './material.module';
 import { AppComponent } from './app.component';
-import { CockpitComponent } from './inputExample/cockpit/cockpit.component';
-import { ChildComponentComponent } from './inputExample/child-component/child-component.component';
-import { ParentComponentComponent } from './inputExample/parent-component/parent-component.component';
+import { CockpitComponent } from './ServiceExample/cockpit/cockpit.component';
+import { ChildComponentComponent } from './ServiceExample/child-component/child-component.component';
+import { ParentComponentComponent } from './ServiceExample/parent-component/parent-component.component';
+import { ServersService } from './ServiceExample/services/servers/servers.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,7 @@ import { ParentComponentComponent } from './inputExample/parent-component/parent
     CustomMaterialModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoggingService, ServersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
