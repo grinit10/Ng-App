@@ -1,0 +1,8 @@
+<app-cockpit></app-cockpit>
+<br>
+<br>
+<mat-card>
+  <mat-card-content>
+    <app-child-component *ngFor='let server of servers' [server]='server' (serverSlected)='setSelected($event)'></app-child-component>
+  </mat-card-content>
+</mat-card>

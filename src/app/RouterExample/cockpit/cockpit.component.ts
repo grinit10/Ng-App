@@ -1,4 +1,4 @@
-import { ServersService } from './../../shared/services/servers/servers.service';
+import { ServersService } from './../services/servers/servers.service';
 import { ServerType } from './../../shared/enums/ServerType';
 import { Server } from './../../shared/models/Server';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';

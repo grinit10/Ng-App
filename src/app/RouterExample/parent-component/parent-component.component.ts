@@ -1,8 +1,8 @@
-import { LoggingService } from './../../shared/services/logging/logging.service';
+import { LoggingService } from './../services/logging/logging.service';
 import { Server } from './../../shared/models/Server';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CockpitComponent } from '../cockpit/cockpit.component';
-import { ServersService } from './../../shared/services/servers/servers.service';
+import { ServersService } from '../services/servers/servers.service';
 
 @Component({
   selector: 'app-parent-component',
